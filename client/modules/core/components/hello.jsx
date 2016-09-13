@@ -1,8 +1,9 @@
 import React from 'react';
-import useSheet from 'react-jss';
+import Load from 'shingon-load-jss';
 
-const Hello = ({ sheet }) => {
-  const { } = sheet.classes;
+const Hello = () => {
+  const { classes } = Load(styles);
+
   return (
     <div>
       <span>Hello</span>
@@ -12,4 +13,4 @@ const Hello = ({ sheet }) => {
 
 const styles = { };
 
-export default useSheet(Hello, styles);
+export default Hello;

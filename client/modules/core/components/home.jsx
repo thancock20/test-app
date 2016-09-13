@@ -1,16 +1,16 @@
 import React from 'react';
-import useSheet from 'react-jss';
 import Helmet from 'react-helmet';
+import Load from 'shingon-load-jss';
 
-const Home = ({ sheet }) => {
+const Home = () => {
 
-  const { welcome } = sheet.classes;
+  const { classes } = Load(styles);
 
   return (
     <div>
       <Helmet title="Home" />
       <h1>Mantra</h1>
-      <p className={welcome}>
+      <p className={classes.welcome}>
         Welcome to Mantra 0.2.0.
       </p>
       <ul>
@@ -32,4 +32,4 @@ const styles = {
   }
 };
 
-export default useSheet(Home, styles);
+export default Home;
